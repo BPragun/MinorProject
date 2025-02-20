@@ -114,28 +114,34 @@ def predict():
     #return jsonify({'result': prediction_label})
 
 def extract_features(url):
-    """
-    Define the feature extraction logic here.
-    It should convert the input URL into a feature vector compatible with the model.
-    """
-    # Example: Replace with your real feature extraction logic
+    # Parse the URL
     parsed_url = urlparse(url)
     domain = parsed_url.netloc
     path = parsed_url.path
     query = parsed_url.query
     tld = domain.split('.')[-1] if '.' in domain else ""
     
+    # Extract file name from path
+    file_name = path.split('/')[-1] if '/' in path else path
+
     # Compute features
-    features = [  len(url),  # Total length of the URL
-         url.count('.'),  # Number of dots in the URL
-         url.count('-'),  # Number of hyphens in the URL
-         url.count('/'),  # Number of slashes in the URL
-         domain.count('.'),  # Number of dots in the domain (TLD included)
-         len(domain),  #t Length of the domain
-         path.count('.'),  # Number of dots in the directory (path)
-         1 if re.search(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", url) else 0  # Email present
+    features = [
+        url.count('/'),                               # qty_slash_url
+        len(url),                                     # length_url
+        domain.count('.'),                            # qty_dot_domain
+        len(domain),                                  # domain_length
+        path.count('.'),                              # qty_dot_directory
+        path.count('-'),                              # qty_hyphen_directory
+        path.count('/'),                              # qty_slash_directory
+        len(path),                                    # directory_length
+        file_name.count('.'),                         # qty_dot_file
+        file_name.count('?'),                         # qty_questionmark_file
+        len(file_name),                               # file_length                                        
+        1 if re.search(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", url) else 0,  # email_in_url
+        url.lower().count(f".{tld.lower()}"),         # qty_tld_url
+        url.count('-')                                # qty_hyphen_url
     ]
-    # Add your feature extraction code here
+
     return features
 
 if __name__ == "__main__":
