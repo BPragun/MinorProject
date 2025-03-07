@@ -1,7 +1,7 @@
-# Phishing Website Detection System
+# URL Phishing Detection System
 
 ## Overview
-The **Phishing Website Detection System** is a machine learning-based solution designed to identify potentially malicious URLs. It analyzes various URL features and predicts whether a given website is legitimate or a phishing attempt. The system is built using Python and incorporates a database for storing URL records and detection results.
+The **URL Phishing Detection System** is a machine learning-based solution designed to identify potentially malicious URLs. It analyzes various URL features and predicts whether a given website is legitimate or a phishing attempt. The system is built using Python and incorporates a database for storing URL records and detection results.
 
 ## Features
 - Extracts key features from URLs for analysis.
