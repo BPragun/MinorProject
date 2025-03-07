@@ -13,7 +13,7 @@ The **Phishing Website Detection System** is a machine learning-based solution d
 ## Installation
 1. **Clone the Repository**:
    ```sh
-   git clone 
+   git clone https://github.com/BPragun/MinorProject.git
    cd phishing-detection
    ```
 2. **Install Dependencies**:
