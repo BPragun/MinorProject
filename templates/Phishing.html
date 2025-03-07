@@ -1,159 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phishing Alert</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('static', filename='result.css') }}"
-    />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result.css') }}">
     <style>
-      .phishing {
-        color: red;
-        font-weight: bold;
-      }
-      :root {
-        --primary-color: rgb(132, 182, 229);
-        --secondary-color: lightblue;
-        --text-color: #333;
-        --border-radius: 20px;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      #Khwopa-logo {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 50%;
-        transition: transform 0.3s ease;
-      }
-
-      #Khwopa-logo:hover {
-        transform: rotate(360deg);
-      }
-
-      body {
-        background-color: var(--secondary-color);
-        font-family: "Arial", sans-serif;
-        line-height: 1.6;
-      }
-
-      .detection {
-        display: flex;
-        align-items: center;
-        margin: 20px;
-        padding: 20px;
-        background-color: var(--primary-color);
-        border-radius: var(--border-radius);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      .centralize {
-        margin: 0 auto;
-        color: white;
-        font-size: 50px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      }
-
-      .result-section {
-        margin: 20px auto;
-        max-width: 800px;
-        padding: 20px;
-        background-color: var(--primary-color);
-        border-radius: var(--border-radius);
-        text-align: center;
-      }
-
-      .btn {
-        border: none;
-        font-size: 1.2rem;
-        color: var(--text-color);
-        background-color: transparent;
-        padding: 10px 20px;
-        margin: 20px 0;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        border-radius: 10px;
-      }
-
-      .btn:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-        transform: translateY(-2px);
-      }
-
-      /* Footer */
-      .footer {
-        background-color: var(--primary-color);
-        color: var(--text-color);
-        padding: 40px 20px;
-        margin-top: 50px;
-        text-align: center;
-      }
-
-      .social-links {
-        margin: 20px 0;
-      }
-
-      .social-links a {
-        color: var(--text-color);
-        margin: 0 10px;
-        font-size: 1.5rem;
-        transition: color 0.3s ease;
-      }
-
-      .social-links a:hover {
-        color: #3498db;
-      }
-
-      /* Media Queries */
-      @media (max-width: 768px) {
-        .centralize {
-          font-size: 30px;
+        .phishing {
+            color: red;
+            font-weight: bold;
         }
-
-        .btn {
-          font-size: 1rem;
-        }
-
-        .result-section {
-          padding: 15px;
-        }
-      }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="detection">
-      <h1 class="centralize">⚠️ Phishing Detected!</h1>
+        <h1 class="centralize">⚠️ Phishing Detected!</h1>
     </div>
 
     <div class="result-section">
-      <img
-        src="https://img.icons8.com/ios-filled/100/000000/error.png"
-        class="result-image"
-        alt="Phishing Alert"
-      />
-      <h2>Warning!</h2>
-      <p class="phishing">
-        The URL "<strong>{{ url }}</strong>" is a phishing site!
-      </p>
-      <button class="btn" onclick="goBack()">Go Back</button>
+        <img src="https://img.icons8.com/ios-filled/100/000000/error.png" class="result-image" alt="Phishing Alert">
+        <h2>Warning!</h2>
+        <p class="phishing">The URL "{{ url }}" is a phishing site!</p>
+        <button class="btn" onclick="goBack()">Go Back</button>
     </div>
 
     <script>
-      function goBack() {
-        window.history.back();
-      }
+        function goBack() {
+            window.history.back();
+        }
     </script>
 
     <footer class="footer">
-      <p>&copy; 2024 Phishing Detection. All rights reserved.</p>
+        <p>&copy; 2024 Phishing Detection. All rights reserved.</p>
     </footer>
-  </body>
+</body>
 </html>
