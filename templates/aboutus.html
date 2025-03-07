@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b3d8ea; /* Light blue */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #2b5d85; /* Darker blue */
+            margin: 20px 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            background-color: #8bb8d9; /* Medium blue */
+            padding: 15px;
+            border-radius: 10px;
+            width: 220px;
+            text-align: center;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member img {
+            width: 180px;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .team-member h2 {
+            font-size: 18px;
+            color: white;
+            margin: 10px 0 5px;
+        }
+
+        .team-member p {
+            font-size: 14px;
+            color: #f1f1f1;
+        }
+
+        /* Go Back button */
+        .go-back {
+            margin: 30px 0;
+        }
+
+        .go-back button {
+            background-color: #2b5d85;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .go-back button:hover {
+            background-color: #1f4a67;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Our Team</h1>
+    
+    <div class="team-container">
+        <div class="team-member">
+            <img src="images/team1.jpg" alt="Team Member 1">
+            <h2>Deepa Gyawali</h2>
+            <p>Roll No: KCE078BCT011</p>
+        </div>
+        <div class="team-member">
+            <img src="\templates\Images\a3a2d1f9-5581-4c37-a080-c42dba5287cf.jpeg" alt="Team Member 2">
+            <h2>Kismat Poudel</h2>
+            <p>Roll No: KCE078BCT022</p>
+        </div>
+        <div class="team-member">
+            <img src="\templates\Images\e4daee44-4f2f-4d58-9cc4-1cb0ef2a0590.jpeg" alt="Team Member 3">
+            <h2>Pragun Bhandari</h2>
+            <p>Roll No: KCE078BCT028</p>
+        </div>
+        <div class="team-member">
+            <img src="images/team4.jpg" alt="Team Member 4">
+            <h2>Sejal Dahal</h2>
+            <p>Roll No: KCE078BCT037</p>
+        </div>
+    </div>
+
+    <!-- Go Back Button -->
+    <div class="go-back">
+        <button onclick="history.back()">Go Back</button>
+    </div>
+
+</body>
+</html>
