@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phishing Detection</title>
@@ -8,117 +8,134 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
     <div class="detection">
-        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="Khwopa-logo">
+      <img
+        src="{{ url_for('static', filename='logo.png') }}"
+        alt="Logo"
+        class="Khwopa-logo"
+      />
 
-        <h1 class="title">Phishing Detection</h1>
+      <h1 class="title">Phishing Detection</h1>
     </div>
     <div class="attribute-nav">
-        <button class="btn">Project Info</button>
-        <button class="btn">About Us</button>
-        <button class="btn">Resources</button>
+      <a href="{{ url_for('project_info') }}">
+        <button class="btn">Project Info</button></a
+      >
+      <a href="{{ url_for('about_us') }}"
+        ><button class="btn">About Us</button></a
+      >
+      <a href="{{ url_for('resources') }}"
+        ><button class="btn">Resources</button></a
+      >
     </div>
     <div class="information-box">
-        <div class="phising-intro">
-            <img
-              class="hover-image"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfcKFhctEX4isJwzLMDCPZZOsvHJTXqkW4LA&s"
-              alt="Phishing image"
-            />
-            <h3 class="hover-text">What is Phishing?</h3>
-            <p class="hover-text">
-                Phishing is a cyberattack where scammers impersonate trusted entities,
-                like banks or websites, to deceive individuals into revealing
-                sensitive information.
-            </p>
+      <div class="phising-intro">
+        <img
+          class="hover-image"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfcKFhctEX4isJwzLMDCPZZOsvHJTXqkW4LA&s"
+          alt="Phishing image"
+        />
+        <h3 class="hover-text">What is Phishing?</h3>
+        <p class="hover-text">
+          Phishing is a cyberattack where scammers impersonate trusted entities,
+          like banks or websites, to deceive individuals into revealing
+          sensitive information.
+        </p>
+      </div>
+      <div class="phising-statistics">
+        <img
+          class="image-fit hover-image"
+          src="https://www.thesslstore.com/blog/wp-content/uploads/2024/05/phishing-attacks-bolster-shadow.png"
+          alt="Phishing Statistics"
+        />
+        <p class="hover-text">
+          A graph showing the increasing Phishing attacks since 2020.
+        </p>
+      </div>
+      <div class="phising-types">
+        <img
+          class="image-fit hover-image"
+          src="https://www.fortinet.com/content/dam/fortinet/images/cyberglossary/types-of-fortiphishing.jpg"
+          alt="Phishing Types"
+        />
+        <div class="hover-text">
+          <ul>
+            <li>Whaling</li>
+            <li>Spear Phishing</li>
+            <li>Vishing</li>
+            <li>Clone phishing</li>
+          </ul>
         </div>
-        <div class="phising-statistics">
-            <img
-              class="image-fit hover-image"
-              src="https://www.thesslstore.com/blog/wp-content/uploads/2024/05/phishing-attacks-bolster-shadow.png"
-              alt="Phishing Statistics"
-            />
-            <p class="hover-text">
-                A graph showing the increasing Phishing attacks since 2020.
-            </p>
-        </div>
-        <div class="phising-types">
-            <img
-              class="image-fit hover-image"
-              src="https://www.fortinet.com/content/dam/fortinet/images/cyberglossary/types-of-fortiphishing.jpg"
-              alt="Phishing Types"
-            />
-            <div class="hover-text">
-                <ul>
-                    <li>Whaling</li>
-                    <li>Spear Phishing</li>
-                    <li>Vishing</li>
-                    <li>Clone phishing</li>
-                </ul>
-            </div>
-        </div>
+      </div>
     </div>
     <div class="theme-switch">
-        <button class="btn" onclick="toggleDarkMode()">
-            <i class="fas fa-moon"></i>
-        </button>
+      <button class="btn" onclick="toggleDarkMode()">
+        <i class="fas fa-moon"></i>
+      </button>
     </div>
 
     <!-- Modified search section -->
     <div class="search-container">
-        <form action="/predict" method="POST" style="text-align: center; margin-top: 50px;">
-            <input
-              class="input-section"
-              type="text"
-              placeholder="Enter your URL here"
-              id="url"
-              name="url" <!-- Added name attribute to pass the URL -->
-            
-            <button class="search-btn" type="submit">
-                <i class="fas fa-search"></i> Analyze
-            </button>
-        </form>
+      <form
+        action="/predict"
+        method="POST"
+        style="text-align: center; margin-top: 50px"
+      >
+        <input
+          class="input-section"
+          type="text"
+          placeholder="Enter your URL here"
+          id="url"
+          name="url"
+        />
+        <button class="search-btn" type="submit">
+          <i class="fas fa-search"></i> Analyze
+        </button>
+      </form>
     </div>
     <div class="loader" id="loader"></div>
 
     <!-- Features section -->
     <section class="features">
-        <div class="feature-card">
-            <i class="fas fa-shield-alt feature-icon"></i>
-            <h3>Real-time Protection</h3>
-            <p>Instant analysis of suspicious URLs</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-database feature-icon"></i>
-            <h3>Large Database</h3>
-            <p>Extensive collection of known phishing patterns</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-chart-line feature-icon"></i>
-            <h3>Advanced Analytics</h3>
-            <p>Detailed analysis and reporting</p>
-        </div>
+      <div class="feature-card">
+        <i class="fas fa-shield-alt feature-icon"></i>
+        <h3>Real-time Protection</h3>
+        <p>Instant analysis of suspicious URLs</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-database feature-icon"></i>
+        <h3>Large Database</h3>
+        <p>Extensive collection of known phishing patterns</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-chart-line feature-icon"></i>
+        <h3>Advanced Analytics</h3>
+        <p>Detailed analysis and reporting</p>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-        </div>
-        <p>&copy; 2024 Phishing Detection. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+      <p>&copy; 2024 Phishing Detection. All rights reserved.</p>
     </footer>
 
     <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-        }
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+      }
     </script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Phishing Detection Resources</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #333;
+        background-color: #e6f7ff;
+        animation: fadeIn 1s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      h1 {
+        color: #1a5276;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        animation: slideInLeft 1s ease-out;
+      }
+      @keyframes slideInLeft {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      h2 {
+        color: #2874a6;
+        margin-top: 30px;
+        animation: slideInRight 1s ease-out;
+      }
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      .resource-section {
+        background-color: #bde9ff;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      .resource-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+      ul {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+        transition: transform 0.2s ease-in-out;
+      }
+      li:hover {
+        transform: scale(1.02);
+      }
+      .description {
+        font-style: italic;
+        color: #1f618d;
+        margin-top: 5px;
+        transition: color 0.3s ease;
+      }
+      .description:hover {
+        color: #154360;
+      }
+      .tag {
+        display: inline-block;
+        background-color: #7fbfff;
+        color: #003366;
+        padding: 3px 8px;
+        border-radius: 3px;
+        font-size: 12px;
+        margin-right: 5px;
+        animation: tagPulse 2s infinite ease-in-out;
+      }
+      @keyframes tagPulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+      a {
+        color: #0066cc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      a:hover {
+        text-decoration: underline;
+        color: #004499;
+      }
+      header {
+        background-color: #5dade2;
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        animation: headerSlide 1.5s ease-out;
+      }
+      @keyframes headerSlide {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>URL Phishing Detection Resources</h1>
+      <p>Key resources for learning about and detecting phishing URLs</p>
+    </header>
+
+    <div class="resource-section">
+      <h2>Wikipedia Resources</h2>
+      <ul>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/Phishing" target="_blank"
+            >Wikipedia: Phishing</a
+          >
+          <div class="description">
+            Comprehensive overview of phishing attacks, including URL-based
+            techniques and countermeasures.
+          </div>
+          <span class="tag">Background</span>
+        </li>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/Typosquatting" target="_blank"
+            >Wikipedia: Typosquatting</a
+          >
+          <div class="description">
+            Information about domain spoofing techniques often used in phishing
+            attacks.
+          </div>
+          <span class="tag">Attack Vector</span>
+        </li>
+        <li>
+          <a
+            href="https://en.wikipedia.org/wiki/URL_redirection"
+            target="_blank"
+            >Wikipedia: URL Redirection</a
+          >
+          <div class="description">
+            Explains how URL redirects can be used in phishing campaigns to mask
+            malicious destinations.
+          </div>
+          <span class="tag">Technique</span>
+        </li>
+        <li>
+          <a
+            href="https://en.wikipedia.org/wiki/Anti-phishing_software"
+            target="_blank"
+            >Wikipedia: Anti-Phishing Software</a
+          >
+          <div class="description">
+            Overview of software designed to detect and prevent phishing
+            attacks.
+          </div>
+          <span class="tag">Solutions</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="resource-section">
+      <h2>Google Scholar Papers</h2>
+      <ul>
+        <li>
+          <a
+            href="https://scholar.google.com/scholar?q=phishing+detection+machine+learning"
+            target="_blank"
+            >Machine Learning for Phishing Detection</a
+          >
+          <div class="description">
+            Academic papers on applying machine learning techniques to identify
+            phishing URLs.
+          </div>
+          <span class="tag">Research</span>
+        </li>
+        <li>
+          <a
+            href="https://scholar.google.com/scholar?q=url+features+phishing+detection"
+            target="_blank"
+            >URL Features for Phishing Detection</a
+          >
+          <div class="description">
+            Research on identifying key URL characteristics that indicate
+            phishing attempts.
+          </div>
+          <span class="tag">Features</span>
+        </li>
+        <li>
+          <a
+            href="https://scholar.google.com/scholar?q=phishing+detection+survey"
+            target="_blank"
+            >Phishing Detection Surveys</a
+          >
+          <div class="description">
+            Survey papers that summarize current research and techniques in
+            phishing detection.
+          </div>
+          <span class="tag">Survey</span>
+        </li>
+        <li>
+          <a
+            href="https://scholar.google.com/scholar?q=real-time+phishing+detection"
+            target="_blank"
+            >Real-time Phishing Detection</a
+          >
+          <div class="description">
+            Research on implementing real-time detection systems for phishing
+            URLs.
+          </div>
+          <span class="tag">Implementation</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="resource-section">
+      <h2>Stack Overflow Discussions</h2>
+      <ul>
+        <li>
+          <a
+            href="https://stackoverflow.com/questions/tagged/phishing"
+            target="_blank"
+            >Stack Overflow: Phishing Tag</a
+          >
+          <div class="description">
+            Community Q&A related to detecting and preventing phishing attacks.
+          </div>
+          <span class="tag">Q&A</span>
+        </li>
+        <li>
+          <a
+            href="https://stackoverflow.com/questions/8318911/efficient-way-to-detect-phishing-websites"
+            target="_blank"
+            >Stack Overflow: Efficient Way to Detect Phishing Websites</a
+          >
+          <div class="description">
+            Discussion on algorithmic approaches to phishing detection.
+          </div>
+          <span class="tag">Algorithms</span>
+        </li>
+        <li>
+          <a
+            href="https://stackoverflow.com/questions/46551268/using-machine-learning-algorithms-to-detect-phishing-urls"
+            target="_blank"
+            >Stack Overflow: ML for Phishing URL Detection</a
+          >
+          <div class="description">
+            Discussion on implementing machine learning techniques for URL
+            analysis.
+          </div>
+          <span class="tag">Machine Learning</span>
+        </li>
+        <li>
+          <a
+            href="https://stackoverflow.com/questions/35445461/how-to-implement-url-filtering"
+            target="_blank"
+            >Stack Overflow: URL Filtering Implementation</a
+          >
+          <div class="description">
+            Technical approaches to filtering and analyzing URLs for suspicious
+            patterns.
+          </div>
+          <span class="tag">Implementation</span>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

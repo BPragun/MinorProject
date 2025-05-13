@@ -13,7 +13,7 @@ app = Flask(__name__)
 db_config = {
     'host': 'localhost',          # Replace with your MySQL host
     'user': 'root',               # Replace with your MySQL username
-    'password': 'pragun1771',     # Replace with your MySQL password
+    'password': 'password',     # Replace with your MySQL password
     'database': 'phishing_detection_system'  # Replace with your database name
 }
 
@@ -81,9 +81,9 @@ def check_url():
         if record['URL'] == user_url:
             # If the URL matches, check the result
             if record['Result'] == 1:
-                return render_template('Phishing.html')  # Phishing URL
+                return render_template('Phishing.html',url=user_url)  # Phishing URL
             else:
-                return render_template('Legitimate.html')  # Legitimate URL
+                return render_template('Legitimate.html',url=user_url)  # Legitimate URL
 
     # If the URL is not found in the database
     return render_template('Unknown.html')  # Unknown URL
@@ -92,6 +92,20 @@ def check_url():
 @app.route('/')
 def home():
     return render_template('final.html')  # Load the frontend HTML
+
+# Route for about us page
+@app.route('/about_us')
+def about_us():
+    return render_template('aboutus.html')
+
+
+@app.route('/project_resources')
+def resources():
+    return render_template('resources.html')
+
+@app.route('/project_info')
+def project_info():
+    return render_template('project_info.html')
 
 # Route to predict if a URL is phishing or legitimate
 @app.route('/predict', methods=['POST'])
@@ -110,9 +124,9 @@ def predict():
         if record['URL'] == input_url:
             # If the URL matches, check the result
             if record['Result'] == 1:
-                return render_template('Phishing.html')  # Phishing URL
+                return render_template('Phishing.html',url=input_url)  # Phishing URL
             else:
-                return render_template('Legitimate.html')  # Legitimate URL
+                return render_template('Legitimate.html',url=input_url)  # Legitimate URL
 
     # If the URL is not found in the database, extract features and predict
     features = extract_features(input_url)
@@ -124,9 +138,9 @@ def predict():
 
     # Return the appropriate template based on the prediction
     if prediction == 1:
-        return render_template('Phishing.html')
+        return render_template('Phishing.html',url=input_url)
     else:
-        return render_template('Legitimate.html')
+        return render_template('Legitimate.html',url=input_url)
 
 # Function to extract features from a URL
 def extract_features(url_entered):

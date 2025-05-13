@@ -1,111 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Team</title>
     <style>
-        /* General styling */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #b3d8ea; /* Light blue */
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
+      /* General styling */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #b3d8ea; /* Light blue */
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
 
-        h1 {
-            color: #2b5d85; /* Darker blue */
-            margin: 20px 0;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-        }
+      h1 {
+        color: #2b5d85; /* Darker blue */
+        margin: 20px 0;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      }
 
-        .team-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-            flex-wrap: wrap;
-        }
+      .team-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        flex-wrap: wrap;
+      }
 
-        .team-member {
-            background-color: #8bb8d9; /* Medium blue */
-            padding: 15px;
-            border-radius: 10px;
-            width: 220px;
-            text-align: center;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-        }
+      .team-member {
+        background-color: #8bb8d9; /* Medium blue */
+        padding: 15px;
+        border-radius: 10px;
+        width: 220px;
+        text-align: center;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+      }
 
-        .team-member img {
-            width: 180px;
-            height: 200px;
-            border-radius: 10px;
-            object-fit: cover;
-        }
+      .team-member img {
+        width: 180px;
+        height: 200px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
 
-        .team-member h2 {
-            font-size: 18px;
-            color: white;
-            margin: 10px 0 5px;
-        }
+      .team-member h2 {
+        font-size: 18px;
+        color: white;
+        margin: 10px 0 5px;
+      }
 
-        .team-member p {
-            font-size: 14px;
-            color: #f1f1f1;
-        }
+      .team-member p {
+        font-size: 14px;
+        color: #f1f1f1;
+      }
 
-        /* Go Back button */
-        .go-back {
-            margin: 30px 0;
-        }
+      /* Go Back button */
+      .go-back {
+        margin: 30px 0;
+      }
 
-        .go-back button {
-            background-color: #2b5d85;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+      .go-back button {
+        background-color: #2b5d85;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
 
-        .go-back button:hover {
-            background-color: #1f4a67;
-        }
+      .go-back button:hover {
+        background-color: #1f4a67;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1>Our Team</h1>
-    
+
     <div class="team-container">
-        <div class="team-member">
-            <img src="images/team1.jpg" alt="Team Member 1">
-            <h2>Deepa Gyawali</h2>
-            <p>Roll No: KCE078BCT011</p>
-        </div>
-        <div class="team-member">
-            <img src="\templates\Images\a3a2d1f9-5581-4c37-a080-c42dba5287cf.jpeg" alt="Team Member 2">
-            <h2>Kismat Poudel</h2>
-            <p>Roll No: KCE078BCT022</p>
-        </div>
-        <div class="team-member">
-            <img src="\templates\Images\e4daee44-4f2f-4d58-9cc4-1cb0ef2a0590.jpeg" alt="Team Member 3">
-            <h2>Pragun Bhandari</h2>
-            <p>Roll No: KCE078BCT028</p>
-        </div>
-        <div class="team-member">
-            <img src="images/team4.jpg" alt="Team Member 4">
-            <h2>Sejal Dahal</h2>
-            <p>Roll No: KCE078BCT037</p>
-        </div>
+      <div class="team-member">
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="Team Member 1"
+        />
+        <h2>Deepa Gyawali</h2>
+        <p>Roll No: KCE078BCT011</p>
+      </div>
+      <div class="team-member">
+        <img
+          src="https://png.pngtree.com/png-vector/20220807/ourmid/pngtree-man-avatar-wearing-gray-suit-png-image_6102786.png"
+          alt="Team Member 2"
+        />
+        <h2>Kismat Poudel</h2>
+        <p>Roll No: KCE078BCT022</p>
+      </div>
+      <div class="team-member">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbNOpai32_rwcRrMxmpF4sNJG3CIR7yTPv7MD9qK4Ft5OdltMU6DymiRqxXRb0qtgGJoE&usqp=CAU"
+          alt="Team Member 3"
+        />
+        <h2>Pragun Bhandari</h2>
+        <p>Roll No: KCE078BCT028</p>
+      </div>
+      <div class="team-member">
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="Team Member 4"
+        />
+        <h2>Sejal Dahal</h2>
+        <p>Roll No: KCE078BCT037</p>
+      </div>
     </div>
 
     <!-- Go Back Button -->
     <div class="go-back">
-        <button onclick="history.back()">Go Back</button>
+      <button onclick="history.back()">Go Back</button>
     </div>
-
-</body>
+  </body>
 </html>

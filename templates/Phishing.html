@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phishing Alert</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result.css') }}">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='result.css') }}"
+    />
     <style>
-        .phishing {
-            color: red;
-            font-weight: bold;
-        }
+      .phishing {
+        color: red;
+        font-weight: bold;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="detection">
-        <h1 class="centralize">⚠️ Phishing Detected!</h1>
+      <h1 class="centralize">⚠️ Phishing Detected!</h1>
     </div>
 
     <div class="result-section">
-        <img src="https://img.icons8.com/ios-filled/100/000000/error.png" class="result-image" alt="Phishing Alert">
-        <h2>Warning!</h2>
-        <p class="phishing">The URL "{{ url }}" is a phishing site!</p>
-        <button class="btn" onclick="goBack()">Go Back</button>
+      <img
+        src="https://img.icons8.com/ios-filled/100/000000/error.png"
+        class="result-image"
+        alt="Phishing Alert"
+      />
+      <h2>Warning!</h2>
+      <p class="phishing">The URL "{{ url }}" is a phishing site!</p>
+      <button class="btn" onclick="goBack()">Go Back</button>
     </div>
 
     <script>
-        function goBack() {
-            window.history.back();
-        }
+      function goBack() {
+        window.history.back();
+      }
     </script>
 
     <footer class="footer">
-        <p>&copy; 2024 Phishing Detection. All rights reserved.</p>
+      <p>&copy; 2024 Phishing Detection. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
